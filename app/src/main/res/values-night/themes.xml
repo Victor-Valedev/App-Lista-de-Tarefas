@@ -20,8 +20,13 @@
     <style name="BACKGROUNDBTN">
         <item name="android:backgroundTint">@color/secundaria_dark</item>
     </style>
+    <style name="BACKGROUNDBTNSALVAR">
+        <item name="android:backgroundTint">@color/secundaria_dark</item>
+    </style>
     <style name="TEXTCOLOR">
         <item name="android:textColor">@color/white</item>
     </style>
+
+
 
 </resources>

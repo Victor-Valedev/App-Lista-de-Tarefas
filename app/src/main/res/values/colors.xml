@@ -16,7 +16,7 @@
     <color name="secundaria_variacao">#FF8051</color>
 
     <!--Dark colors -->
-    <color name="primaria_dark">#000000</color>
+    <color name="primaria_dark">#FFFFFF</color>
     <color name="primaria_variacao_dark">#1B1B1C</color>
 
     <color name="secundaria_dark">#000000</color>

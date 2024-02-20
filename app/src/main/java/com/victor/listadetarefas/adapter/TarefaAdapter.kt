@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.victor.listadetarefas.databinding.ItemTarefaBinding
 import com.victor.listadetarefas.model.Tarefa
 
-class TarefaAdapter() : RecyclerView.Adapter<TarefaAdapter.TarefaViewHolder>() {
+class TarefaAdapter(
+    val onClickExcluir: (Int) -> Unit
+) : RecyclerView.Adapter<TarefaAdapter.TarefaViewHolder>() {
 
     private var listaTarefas: List<Tarefa> = emptyList()
 
@@ -27,6 +29,13 @@ class TarefaAdapter() : RecyclerView.Adapter<TarefaAdapter.TarefaViewHolder>() {
         fun bind(tarefa: Tarefa){
             binding.textDescricao.text = tarefa.descricao
             binding.textData.text = tarefa.dataCadastro
+
+            binding.btnExcluir.setOnClickListener {
+
+                onClickExcluir( tarefa.idTarefa )
+
+            }
+
         }
 
     }
