@@ -7,7 +7,8 @@ import com.victor.listadetarefas.databinding.ItemTarefaBinding
 import com.victor.listadetarefas.model.Tarefa
 
 class TarefaAdapter(
-    val onClickExcluir: (Int) -> Unit
+    val onClickExcluir: (Int) -> Unit,
+    val onClickEditar: (Tarefa) -> Unit
 ) : RecyclerView.Adapter<TarefaAdapter.TarefaViewHolder>() {
 
     private var listaTarefas: List<Tarefa> = emptyList()
@@ -34,6 +35,10 @@ class TarefaAdapter(
 
                 onClickExcluir( tarefa.idTarefa )
 
+            }
+
+            binding.btnEditar.setOnClickListener {
+                onClickEditar( tarefa )
             }
 
         }
